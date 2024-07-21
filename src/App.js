@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Maze Game</h1>
+        <h1>M A Z E</h1>
       </header>
       <main className="App-content">
         <MazeContainer />
