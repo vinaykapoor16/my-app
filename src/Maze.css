@@ -1,0 +1,92 @@
+.maze {
+  display: grid;
+  grid-template-columns: repeat(20, 50px); /* Increase cell size */
+  grid-template-rows: repeat(20, 50px); /* Increase cell size */
+  gap: 2px; /* Increase gap for better visibility */
+  border: 3px solid rgb(239, 9, 9);
+  margin: 20px auto;
+  position: relative;
+}
+
+.maze-row {
+  display: contents; /* Use contents to make the grid layout more efficient */
+}
+
+.maze-cell {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.wall {
+  background-color: rgb(62, 136, 44);
+}
+
+.passage {
+  background-color: #f0c0d1;
+}
+
+.car {
+  background: url('/public/car.png') rgb(24, 24, 22); /* Ensure the correct path */
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  transform-origin: center; /* Ensure rotation is around the center */
+  transition: transform 0.2s ease-in-out;
+}
+
+.end {
+  background-color: rgb(224, 51, 51);
+}
+
+/* New styles for the buttons */
+.large-button {
+  font-size: 20px; /* Increase font size */
+  padding: 15px 30px; /* Increase padding for a larger button */
+  margin: 10px; /* Add margin to space out buttons */
+  background-color: rgb(24, 24, 135); /* Button color */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.large-button:hover {
+  background-color: darkblue; /* Change color on hover */
+}
+#graph {
+  display: grid;
+  grid-template-columns: repeat(3, 50px); /* Adjust based on your graph size */
+  grid-template-rows: repeat(3, 50px); /* Adjust based on your graph size */
+  gap: 5px;
+  margin: 20px;
+}
+
+.node {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000;
+  background-color: #fff;
+  font-size: 20px;
+}
+
+.node.visited {
+  background-color: #b5b5b5; /* Gray for visited nodes */
+}
+
+.node.path {
+  background-color: orange; /* Highlight path in orange */
+}
+
+.node.start {
+  background-color: lightgreen; /* Start node color */
+}
+
+.node.end {
+  background-color: lightcoral; /* End node color */
+}
+

@@ -7,15 +7,9 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #e76127;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +18,37 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.maze {
+  display: grid;
+  grid-template-columns: repeat(20, 100px);
+  grid-template-rows: repeat(20, 100px);
+  gap: 1px;
+  border: 2px solid black;
+  margin: 20px auto;
+  position: relative;
+}
+
+.maze-row {
+  display: contents;
+}
+
+.maze-cell {
+  width: 100%;
+  height: 100%;
+}
+
+.wall {
+  background-color: rgb(231, 40, 40);
+}
+
+.passage {
+  background-color: rgb(139, 218, 35);
 }
